@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Média</title>
+</head>
+<body>
+
+  <h2>Média acadêmica</h2>
+
+  Nome: <input type="text" id="nome"><br><br>
+  Nota 1: <input type="number" id="nota1"><br><br>
+  Nota 2: <input type="number" id="nota2"><br><br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcular() {
+      const nome = document.getElementById("nome").value;
+      const nota1 = Number(document.getElementById("nota1").value);
+      const nota2 = Number(document.getElementById("nota2").value);
+      const media = (nota1 + nota2) / 2;
+        
+      document.getElementById("resultado").innerText = nome + " - " + media;
+    }
+  </script>
+
+</body>
+</html>
